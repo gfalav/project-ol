@@ -26,3 +26,33 @@ Things you may want to cover:
 
 Please feel free to use a different markup language if you do not plan to run
 <tt>rake doc:app</tt>.
+
+rails generate scaffold empresa nombre:string direccion1:string direccion2:string provincia:string pais:string zipcode:string telefono:string email:string website:string logofile:string lider_id:integer
+
+rails generate scaffold proyecto empresa_id:integer nombre:string description:text comitente:string lider:string fcierre:datetime logofile:string eproyecto:string
+
+rails generate scaffold listtarea proyecto_id:integer lista:string descripcion:text elista:string lider_id:integer falta:datetime fvcto:datetime fuce:datetime fcierre:datetime
+
+rails generate scaffold tarea listtarea_id:integer nombre:string description:text fplanvcto:datetime ffin:datetime responsable:integer avance:float ttarea:integer etarea:integer privada:integer trepeticion:integer
+
+rails generate scaffold hito proyecto_id:integer nombre:string description:text ffin:datetime responsable_id:integer thito:integer ehito:integer privada:integer
+
+rails generate scaffold user nombre:string email:string password:digest fvctopass:datetime role:string direccion:string telefono:string celphone:string timezone:integer photofile:string empresa_id:integer
+
+rails generate scaffold archivo nombre:string falta:datetime user_id:integer
+
+rails generate scaffold user_proyecto user_id:integer proyecto_id:integer
+
+rails generate scaffold user_listtarea user_id:integer listtarea_id:integer
+
+rails generate scaffold user_tarea user_id:integer tarea_id:integer
+
+rails generate scaffold user_hito user_id:integer hito_id:integer
+
+rails generate scaffold archivo_proyecto archivo_id:integer proyecto_id:integer
+
+rails generate scaffold archivo_listtarea archivo_id:integer listtarea_id:integer
+
+rails generate scaffold archivo_tarea archivo_id:integer tarea_id:integer
+
+rails generate scaffold archivo_hito archivo_id:integer hito_id:integer
