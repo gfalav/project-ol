@@ -1,0 +1,141 @@
+/*
+ * This is a manifest file that'll be compiled into application.css, which will include all the files
+ * listed below.
+ *
+ * Any CSS and SCSS file within this directory, lib/assets/stylesheets, vendor/assets/stylesheets,
+ * or vendor/assets/stylesheets of plugins, if any, can be referenced here using a relative path.
+ *
+ * You're free to add application-wide styles to this file and they'll appear at the bottom of the
+ * compiled file so the styles you add here take precedence over styles defined in any styles
+ * defined in the other CSS/SCSS files in this directory. It is generally better to create a new
+ * file per style scope.
+ *
+ *= require_tree .
+ *= require_self
+ */
+
+body, page {
+	margin: 0;
+	padding: 0;
+	font-family: "Lucida Sans Unicode", "Lucida Grande", sans-serif;
+}
+
+#contenido {
+	clear: both;
+}
+
+
+#projectbar {
+	clear: both;
+	overflow: hidden;
+	background-color: #3B5574;
+}
+
+#textbar, #userimage, #userdata {
+	float: left;
+	height: 76px;
+}
+
+#textbar { 
+	width: 85%; 
+	margin: 0;
+	padding: 0;
+}
+
+#textbar h3 {
+	color: white;
+	font-size: 20px;
+	padding: 10px;
+	margin: 0;
+}
+
+#textbar h4 {
+	color: white;
+	font-size: 14px;
+	padding: 10px;
+	margin: 0;
+}
+
+#userimage {
+	width: 5%;
+	text-align: center;
+	overflow: hidden;
+}
+
+#userimage img {
+	padding: 12px;
+}
+#userdata {
+	width: 10%;
+}
+
+#userdata ul {
+	list-style: none;
+	margin: 0;
+	padding: 0;
+	text-align: center;
+}
+
+#userdata ul a {
+	text-decoration: none;
+	color: white;
+	font-size: 10px;
+}
+
+
+
+
+
+
+
+#mainbar	{ 
+	width: 100%; 
+	background-color: #2F435B; 
+	height: 37px; 
+	padding-left: 20px;
+	border-bottom: solid 1px white;
+}
+
+#mainmenu  	{ width: 50%; float: left; }
+#recmenu   	{ width: 22%; background-color: blue; float: left;}
+#middlebar 	{ 
+	width: 25%; 
+	height: 37px; 
+	float: left; 
+	background-color: #2F435B;
+}
+
+#mainmenu #mmcontainer, #recmenu #reccontainer {
+	border-bottom: 1px solid white;
+	background-color: #2F435B;
+	height: 37px;
+}
+
+#mainmenu #mmcontainer ul, #recmenu #reccontainer ul {
+	list-style: none;
+	margin: 0px;
+	padding: 0px;
+}
+
+#mainmenu #mmcontainer ul a, #recmenu #reccontainer ul a {
+	text-decoration: none;
+	float: left;
+	margin-right: 5px;
+	color: white;
+	background-color: #2F435B;
+	border: 1px solid white;
+	border-bottom: none;
+	padding: 10px;
+	width: 70px;
+	text-align: center;
+	font-size: 12px;
+	display: block;
+	border-top-left-radius: 8px;
+	border-top-right-radius: 8px;
+}
+
+#mainmenu #mmcontainer ul a:hover, #recmenu #reccontainer ul a:hover {
+	background-color: #3B5574;
+	text-shadow: 1px 1px 1px black;
+}
+

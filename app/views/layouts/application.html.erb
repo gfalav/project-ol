@@ -1,0 +1,60 @@
+<!DOCTYPE html>
+<html>
+<head>
+  <title>Gestión de Proyectos Online</title>
+  <%= stylesheet_link_tag    'application', media: 'all', 'data-turbolinks-track' => true %>
+  <%= javascript_include_tag 'application', 'data-turbolinks-track' => true %>
+  <%= csrf_meta_tags %>
+</head>
+<body>
+
+	<div id="mainbar">
+		<div id="mainmenu">
+			<div id="mmcontainer">
+				<ul>
+					<li><%= link_to "PIZARRA" %></li>
+					<li><%= link_to "PROYECTO" %></li>
+					<li><%= link_to "PROGRAMA" %></li>
+					<li><%= link_to "TAREA" %></li>
+					<li><%= link_to "HITO" %></li>
+				</ul>
+			</div>
+		</div>
+
+		<div id="middlebar">
+		</div>
+
+		<div id="recmenu">
+			<div id="reccontainer">
+				<ul>
+					<li><%= link_to "EMPRESA" %></li>
+					<li><%= link_to "RRHH" %></li>
+					<li><%= link_to "RECURSOS" %></li>
+				</ul>
+			</div>
+		</div>
+	</div>
+
+	<div id="projectbar">
+		<div id="textbar">
+			<h3><%= label_tag ("línea uno") %></h3>
+			<h4><%= label_tag ("linea dos") %></h4>
+		</div>
+		<div id="userimage">
+			<%= image_tag("aa", :size=>"50x50") %>
+		</div>
+		<div id="userdata">
+			<ul>
+			<li><%= link_to("USUARIO") %><br></li>
+			<li><%= link_to("ROL") %><br></li>
+			<li><%= link_to("LOGOUT") %></li>
+			</ul>
+		</div>
+	</div>
+
+	<div id="contenido">
+		<%= yield %>
+	</div>
+
+</body>
+</html>
