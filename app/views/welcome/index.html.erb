@@ -1,2 +1,22 @@
 <h1>Welcome#index</h1>
 <p>Find me in app/views/welcome/index.html.erb</p>
+
+<div id="container">
+
+	<ul>
+		<li><%= link_to "Menu 1","#tab1" %></li>
+		<li><%= link_to "Menu 2","#tab2" %></li>
+		<li><%= link_to "Menu 3","#tab3" %></li>
+	</ul>
+
+
+	<div id="tab1" class="tabclass">
+		<p>Primer párrafo</p>
+	</div>
+	<div id="tab2" class="tabclass">
+		<p>Segundo párrafo</p>
+	</div>
+	<div id="tab3" class="tabclass">
+		<p>Tercer párrafo</p>
+	</div>
+</div>
