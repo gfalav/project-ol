@@ -37,18 +37,28 @@
 
 	<div id="projectbar">
 		<div id="textbar">
-			<h3><%= label_tag ("línea uno") %></h3>
-			<h4><%= label_tag ("linea dos") %></h4>
+			<% if @linea1 %>
+				<h3><%= label_tag ("línea uno") %></h3>
+			<% else %>
+				<h3 style="padding: 20px 20px 20px 80px;">Gestión de Proyectos Online</h3>			
+			<% end %>
+			<% if @linea2 %>
+				<h4><%= label_tag ("linea dos") %></h4>
+			<% end %>
 		</div>
 		<div id="userimage">
-			<%= image_tag("aa", :size=>"50x50") %>
+			<% if @user %>
+				<%= image_tag("aa", :size=>"50x50") %>
+			<% end %>
 		</div>
 		<div id="userdata">
-			<ul>
-			<li><%= link_to("USUARIO") %><br></li>
-			<li><%= link_to("ROL") %><br></li>
-			<li><%= link_to("LOGOUT") %></li>
-			</ul>
+			<% if @user %>
+				<ul>
+					<li><%= link_to("USUARIO") %><br></li>
+					<li><%= link_to("ROL") %><br></li>
+					<li><%= link_to("LOGOUT") %></li>
+				</ul>
+			<% end %>
 		</div>
 	</div>
 
