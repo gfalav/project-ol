@@ -1,0 +1,107 @@
+<%= form_for(@empresa) do |f| %>
+  <% if @empresa.errors.any? %>
+    <div id="error_explanation">
+      <h2><%= pluralize(@empresa.errors.count, "error") %> prohibited this empresa from being saved:</h2>
+
+      <ul>
+      <% @empresa.errors.full_messages.each do |message| %>
+        <li><%= message %></li>
+      <% end %>
+      </ul>
+    </div>
+  <% end %>
+
+  <div id="e-contenedor">
+    <ul>
+      <li>
+        <%= radio_button_tag(:menu, "PRI") %>
+        <%= label_tag(:menu, "PRINCIPAL") %>
+      </li>
+      <li>
+        <%= radio_button_tag(:menu, "DIR") %>
+        <%= label_tag(:menu, "DIRECCIÓN") %>
+      </li>
+      <li>
+        <%= radio_button_tag(:menu, "WEB") %>
+        <%= label_tag(:menu, "WEB") %>
+      </li>
+    </ul>
+  </div> <!-- fin e-contenedor -->
+
+
+
+
+  <div id="e-f-container">
+    <div id="e-tab1" class="e-tabs">
+      <div class="field">
+        <%= f.label :nombre %><br>
+        <%= f.text_field :nombre %>
+      </div>
+      <div class="field">
+        <%= f.label :lider_id %><br>
+        <%= f.number_field :lider_id %>
+      </div>
+      <div class="field">
+        <%= f.label :logofile %><br>
+        <%= f.file_field :logofile %>
+      </div>
+    </div>
+    <div id="e-tab2" class="e-tabs">
+      <div class="field">
+        <%= f.label :direccion1 %><br>
+        <%= f.text_field :direccion1 %>
+      </div>
+      <div class="field">
+        <%= f.label :direccion2 %><br>
+        <%= f.text_field :direccion2 %>
+      </div>
+      <div class="field">
+        <%= f.label :provincia %><br>
+        <%= f.text_field :provincia %>
+      </div>
+      <div class="field">
+        <%= f.label :pais %><br>
+        <%= f.text_field :pais %>
+      </div>
+      <div class="field">
+        <%= f.label :zipcode %><br>
+        <%= f.text_field :zipcode %>
+      </div>
+    </div>
+    <div id="e-tab3" class="e-tabs">
+      <div class="field">
+        <%= f.label :telefono %><br>
+        <%= f.text_field :telefono %>
+      </div>
+      <div class="field">
+        <%= f.label :email %><br>
+        <%= f.text_field :email %>
+      </div>
+      <div class="field">
+        <%= f.label :website %><br>
+        <%= f.text_field :website %>
+      </div>
+    </div>
+    <div class="actions">
+      <%= f.submit %>
+    </div>
+  </div>
+<% end %>
+
+
+<script type="text/javascript">
+ $(document).ready(function(){
+        $("#menu_PRI").click(function(){
+            $('.e-tabs').hide(); //muestro mediante id
+            $('#e-tab1').show(); //muestro mediante clase
+         });
+        $("#menu_DIR").click(function(){
+            $('.e-tabs').hide(); //oculto mediante id
+            $('#e-tab2').show(); //muestro mediante clase
+        });
+        $("#menu_WEB").click(function(){
+            $('.e-tabs').hide(); //oculto mediante id
+            $('#e-tab3').show(); //muestro mediante clase
+        });
+    });
+ </script>

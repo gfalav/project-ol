@@ -92,13 +92,13 @@ body, page {
 #mainbar	{ 
 	width: 100%; 
 	background-color: #2F435B; 
-	height: 37px; 
+	height: 40px; 
 	padding-left: 20px;
-	border-bottom: solid 1px white;
+	border-bottom: 1px solid white;
 }
 
 #mainmenu  	{ width: 50%; float: left; }
-#recmenu   	{ width: 22%; background-color: blue; float: left;}
+#recmenu   	{ width: 22%; float: left; }
 #middlebar 	{ 
 	width: 25%; 
 	height: 37px; 
@@ -107,7 +107,6 @@ body, page {
 }
 
 #mainmenu #mmcontainer, #recmenu #reccontainer {
-	border-bottom: 1px solid white;
 	background-color: #2F435B;
 	height: 37px;
 }
