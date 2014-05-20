@@ -2,7 +2,18 @@
 // They will automatically be included in application.css.
 // You can use Sass (SCSS) here: http://sass-lang.com/
 
+.form_title {
+	text-align: center;
+	background-color: black;
+	color: white;
+	line-height: 40px;
+	margin: 0;
+	padding: 0;
+}
 
+.field input[type="text"], .field input[type="file"], .field input[type="email"] {
+	width: 300px;
+}
 
 #e-contenedor {
 	border-bottom: 1px solid #2F435B;
@@ -28,11 +39,11 @@
 	border: 1px solid white;
 	border-bottom: none;
 	width: 70px;
-	display: block;
+	display: inline-block;
 }
 
 #e-contenedor ul li [type="radio"] {
-	/* display: none; */
+	display: none;
 }
 
 #e-contenedor ul li [type="radio"] + label {
@@ -49,4 +60,10 @@
 
 .field {
 	clear: both;
+}
+
+#e-accion button{
+	height: 50px;
+	background-color: #2F435B;
+	color: black;
 }
