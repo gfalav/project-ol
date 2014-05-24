@@ -47,16 +47,20 @@
 			<% end %>
 		</div>
 		<div id="userimage">
-			<% if @user %>
-				<%= image_tag("aa", :size=>"50x50") %>
+			<% if session[:user_logged] %>
+				<%= image_tag(Rails.root.join('app', 'assets', 'images', 'users', @user_logged.photofile),:size=>"50x50") %>
 			<% end %>
 		</div>
 		<div id="userdata">
-			<% if @user %>
+			<% if session[:user_logged] %>
 				<ul>
-					<li><%= link_to("USUARIO") %><br></li>
-					<li><%= link_to("ROL") %><br></li>
-					<li><%= link_to("LOGOUT") %></li>
+					<li><%= link_to(@user_logged.nombre) %><br></li>
+					<li><%= link_to(@user_logged.role) %><br></li>
+					<li><%= link_to("LOGOUT", logout_url) %></li>
+				</ul>
+			<% else %>
+				<ul>
+					<li id="login_link"><%= link_to("LOGIN", login_url) %></li>
 				</ul>
 			<% end %>
 		</div>

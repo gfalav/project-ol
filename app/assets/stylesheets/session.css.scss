@@ -1,0 +1,17 @@
+// Place all the styles related to the Session controller here.
+// They will automatically be included in application.css.
+// You can use Sass (SCSS) here: http://sass-lang.com/
+
+.session_form{
+	width: 400px;
+	padding: 40px 200px;
+}
+
+.ses_title {
+	text-align: right;
+}
+
+.ses_field input[type=text], .ses_field input[type=password] {
+	width: 300px;
+}
+

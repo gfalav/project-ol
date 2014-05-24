@@ -1,4 +1,12 @@
 Rails.application.routes.draw do
+
+  controller :session do
+    get "login" => :new
+    post "login" => :create
+    get "logout" => :destroy
+
+  end
+
   resources :users
 
   resources :empresas
