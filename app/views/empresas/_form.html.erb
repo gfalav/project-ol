@@ -34,44 +34,47 @@
   <div id="e-f-container">
     <div id="e-tab1" class="e-tabs">
       <div class="field">
-        <%= f.label :nombre %><br>
+        <%= image_tag( Rails.root.join('app', 'assets', 'images', 'logos', @empresa.logofile), :size=>"180x90") %>
+      </div>
+      <div class="field">
+        <%= f.label :nombre, "Nombre de la Empresa" %><br>
         <%= f.text_field :nombre %>
       </div>
       <div class="field">
-        <%= f.label :lider_id %><br>
+        <%= f.label :lider_id, "Líder / Contacto" %><br>
         <%= select_tag :lider_id %><br>
         <%= f.number_field :lider_id %>
       </div>
       <div class="field">
-        <%= f.label :logofile %><br>
+        <%= f.label :logofile,"Logo (Imagen de relación 2x1)" %><br>
         <%= f.file_field :logofile %>
       </div>
     </div>
     <div id="e-tab2" class="e-tabs">
       <div class="field">
-        <%= f.label :direccion1 %><br>
+        <%= f.label :direccion1, "Dirección Línea 1" %><br>
         <%= f.text_field :direccion1 %>
       </div>
       <div class="field">
-        <%= f.label :direccion2 %><br>
+        <%= f.label :direccion2, "Dirección Línea 2" %><br>
         <%= f.text_field :direccion2 %>
       </div>
       <div class="field">
-        <%= f.label :provincia %><br>
+        <%= f.label :provincia, "Provincia" %><br>
         <%= f.text_field :provincia %>
       </div>
       <div class="field">
-        <%= f.label :pais %><br>
+        <%= f.label :pais, "País" %><br>
         <%= f.text_field :pais %>
       </div>
       <div class="field">
-        <%= f.label :zipcode %><br>
+        <%= f.label :zipcode, "Código Postal" %><br>
         <%= f.text_field :zipcode %>
       </div>
     </div>
     <div id="e-tab3" class="e-tabs">
       <div class="field">
-        <%= f.label :telefono %><br>
+        <%= f.label :telefono, "Teléfono" %><br>
         <%= f.text_field :telefono %>
       </div>
       <div class="field">
@@ -79,7 +82,7 @@
         <%= f.email_field :email %>
       </div>
       <div class="field">
-        <%= f.label :website %><br>
+        <%= f.label :website, "Sitio Web" %><br>
         <%= f.text_field :website %>
       </div>
     </div>

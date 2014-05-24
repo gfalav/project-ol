@@ -1,59 +1,62 @@
-<p id="notice"><%= notice %></p>
+<div class="e-show">
+  
+  <p id="notice"><%= notice %></p>
 
-<p>
-  <strong>Nombre:</strong>
-  <%= @empresa.nombre %>
-</p>
+  <p>
+    <%= image_tag(Rails.root.join('app', 'assets', 'images', 'logos', @empresa.logofile),:size=>"200x100") %>
+  </p>
+  <p>
+    <strong>Nombre de la Empresa:</strong>
+    <%= @empresa.nombre %>
+  </p>
 
-<p>
-  <strong>Direccion1:</strong>
-  <%= @empresa.direccion1 %>
-</p>
+  <p>
+    <strong>Lider:</strong>
+    <%= @empresa.lider_id %>
+  </p>
 
-<p>
-  <strong>Direccion2:</strong>
-  <%= @empresa.direccion2 %>
-</p>
+  <p>
+    <strong>Dirección Línea 1:</strong>
+    <%= @empresa.direccion1 %>
+  </p>
 
-<p>
-  <strong>Provincia:</strong>
-  <%= @empresa.provincia %>
-</p>
+  <p>
+    <strong>Dirección línea 2:</strong>
+    <%= @empresa.direccion2 %>
+  </p>
 
-<p>
-  <strong>Pais:</strong>
-  <%= @empresa.pais %>
-</p>
+  <p>
+    <strong>Provincia:</strong>
+    <%= @empresa.provincia %>
+  </p>
 
-<p>
-  <strong>Zipcode:</strong>
-  <%= @empresa.zipcode %>
-</p>
+  <p>
+    <strong>País:</strong>
+    <%= @empresa.pais %>
+  </p>
 
-<p>
-  <strong>Telefono:</strong>
-  <%= @empresa.telefono %>
-</p>
+  <p>
+    <strong>Código Postal:</strong>
+    <%= @empresa.zipcode %>
+  </p>
 
-<p>
-  <strong>Email:</strong>
-  <%= @empresa.email %>
-</p>
+  <p>
+    <strong>Teléfono:</strong>
+    <%= @empresa.telefono %>
+  </p>
 
-<p>
-  <strong>Website:</strong>
-  <%= @empresa.website %>
-</p>
+  <p>
+    <strong>Email:</strong>
+    <%= @empresa.email %>
+  </p>
 
-<p>
-  <strong>Logofile:</strong>
-  <%= @empresa.logofile %>
-</p>
+  <p>
+    <strong>Website:</strong>
+    <%= @empresa.website %>
+  </p>
 
-<p>
-  <strong>Lider:</strong>
-  <%= @empresa.lider_id %>
-</p>
 
-<%= link_to 'Edit', edit_empresa_path(@empresa) %> |
-<%= link_to 'Back', empresas_path %>
+  <%= link_to 'Edit', edit_empresa_path(@empresa) %> |
+  <%= link_to 'Back', empresas_path %>
+
+</div>

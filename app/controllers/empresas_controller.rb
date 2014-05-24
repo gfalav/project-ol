@@ -24,6 +24,13 @@ class EmpresasController < ApplicationController
   # POST /empresas
   # POST /empresas.json
   def create
+    uploaded_io = params[:empresa][:logofile]
+    File.open(Rails.root.join('app', 'assets', 'images', 'logos', uploaded_io.original_filename), 'wb') do |file|
+      file.write(uploaded_io.read)
+    end
+
+
+
     @empresa = Empresa.new(empresa_params)
 
     respond_to do |format|
@@ -40,6 +47,18 @@ class EmpresasController < ApplicationController
   # PATCH/PUT /empresas/1
   # PATCH/PUT /empresas/1.json
   def update
+
+    if params[:empresa][:logofile]
+      uploaded_io = params[:empresa][:logofile]
+      File.open(Rails.root.join('app', 'assets', 'images', 'logos', uploaded_io.original_filename), 'wb') do |file|
+        file.write(uploaded_io.read)
+      end
+
+      debugger
+      params[:empresa][:logofile]= params[:empresa][:logofile].original_filename
+    end
+
+
     respond_to do |format|
       if @empresa.update(empresa_params)
         format.html { redirect_to @empresa, notice: 'Empresa was successfully updated.' }

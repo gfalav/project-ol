@@ -2,11 +2,40 @@
 // They will automatically be included in application.css.
 // You can use Sass (SCSS) here: http://sass-lang.com/
 
+.e-table {
+	padding: 40px;
+	margin: 0px;
+	clear: both;
+}
+
+.e-logofile {
+	width: 120px;
+	text-align: center;
+	border: 1px solid black;
+}
+
+.e-nombre {
+	width: 300px;
+	border: 1px solid black;
+	font-size: 16px;
+}
+
+.e-lider {
+	width: 300px;
+	border: 1px solid black;
+	font-size: 16px;
+}
+
+.e-show {
+	padding-top: 10px;	
+	padding-left: 30px;	
+}
+
 .form_title {
 	text-align: center;
 	background-color: black;
 	color: white;
-	line-height: 40px;
+	line-height: 50px;
 	margin: 0;
 	padding: 0;
 }
