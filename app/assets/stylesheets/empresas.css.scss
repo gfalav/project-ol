@@ -3,7 +3,7 @@
 // You can use Sass (SCSS) here: http://sass-lang.com/
 
 .e-table {
-	padding: 40px;
+	padding-left: 40px;
 	margin: 0px;
 	clear: both;
 }
@@ -40,7 +40,7 @@
 	padding: 0;
 }
 
-.field input[type="text"], .field input[type="file"], .field input[type="email"] {
+.field input[type="text"], .field input[type="file"], .field input[type="email"], .field select {
 	width: 300px;
 }
 

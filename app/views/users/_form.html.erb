@@ -1,0 +1,110 @@
+<%= form_for(@user) do |f| %>
+  <% if @user.errors.any? %>
+    <div id="error_explanation">
+      <h2><%= pluralize(@user.errors.count, "error") %> prohibited this user from being saved:</h2>
+
+      <ul>
+      <% @user.errors.full_messages.each do |message| %>
+        <li><%= message %></li>
+      <% end %>
+      </ul>
+    </div>
+  <% end %>
+
+  <div id="e-contenedor">
+    <ul>
+      <li>
+        <%= radio_button_tag(:menu, "PRI") %>
+        <%= label_tag(:menu_PRI, "PRINCIPAL") %>
+      </li>
+      <li>
+        <%= radio_button_tag(:menu, "ADC") %>
+        <%= label_tag(:menu_ADC, "ADICIONAL") %>
+      </li>
+      <li>
+        <%= radio_button_tag(:menu, "CONT") %>
+        <%= label_tag(:menu_CONT, "CONTACTO") %>
+      </li>
+    </ul>
+  </div> <!-- fin e-contenedor -->
+
+  <div id="e-f-container">
+    <div class="field">
+      <%= image_tag( Rails.root.join('app', 'assets', 'images', 'users', @user.photofile), :size=>"90x90") %>
+    </div>
+    <div id="e-tab1" class="e-tabs">
+      <div class="field">
+        <%= f.label :nombre, "Nombre del Usuario" %><br>
+        <%= f.text_field :nombre %>
+      </div>
+      <div class="field">
+        <%= f.label :email, "Email" %><br>
+        <%= f.text_field :email %>
+      </div>
+      <div class="field">
+        <%= f.label :password, "Password" %><br>
+        <%= f.password_field :password %>
+      </div>
+      <div>
+        <%= f.label :password_confirmation,"Confirma password" %><br>
+        <%= f.password_field :password_confirmation %>
+      </div>
+    </div>
+    <div id="e-tab2" class="e-tabs">      
+      <div class="field">
+        <%= f.label :role, "Rol en el Proyecto" %><br>
+        <%= f.text_field :role %>
+      </div>
+      <div class="field">
+        <%= f.label :timezone %><br>
+        <%= f.number_field :timezone %>
+      </div>
+      <div class="field">
+        <%= f.label :empresa_id %><br>
+        <%= select_tag :empresa_id, options_from_collection_for_select(@empresas, "id", "nombre") %>
+      </div>
+      <div class="field">
+        <%= f.label :photofile, "Imagen de Usuario" %><br>
+        <%= f.file_field :photofile %>
+      </div>
+    </div>
+    <div id="e-tab3" class="e-tabs">
+      <div class="field">
+        <%= f.label :direccion, "Dirección" %><br>
+        <%= f.text_field :direccion %>
+      </div>
+      <div class="field">
+        <%= f.label :telefono, "Teléfono del Trabajo" %><br>
+        <%= f.text_field :telefono %>
+      </div>
+      <div class="field">
+        <%= f.label :celphone, "Celular" %><br>
+        <%= f.text_field :celphone %>
+      </div>
+    </div>
+    <div class="actions">
+      <%= f.submit %>
+    </div>
+  </div>
+<% end %>
+
+
+<script type="text/javascript">
+ $(document).ready(function(){
+
+        $("#e-tab1").show();
+
+        $("#menu_PRI").click(function(){
+            $('.e-tabs').hide(); //muestro mediante id
+            $('#e-tab1').show(); //muestro mediante clase
+         });
+        $("#menu_ADC").click(function(){
+            $('.e-tabs').hide(); //oculto mediante id
+            $('#e-tab2').show(); //muestro mediante clase
+        });
+        $("#menu_CONT").click(function(){
+            $('.e-tabs').hide(); //oculto mediante id
+            $('#e-tab3').show(); //muestro mediante clase
+        });
+    });
+ </script>

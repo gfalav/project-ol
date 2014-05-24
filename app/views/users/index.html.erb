@@ -1,0 +1,32 @@
+<h1 class="form_title">Lista de usuarios</h1>
+
+<table class="e-table">
+  <thead>
+    <tr>
+      <th></th>
+      <th class="u-nombre">Nombre</th>
+      <th class="u-nombre">Email</th>
+      <th class="u-nombre">Role</th>
+      <th class="u-nombre">Empresa</th>
+      <th colspan="2"></th>
+    </tr>
+  </thead>
+
+  <tbody>
+    <% @users.each do |user| %>
+      <tr>
+        <td><%= image_tag(Rails.root.join('app', 'assets', 'images', 'users', user.photofile),:size=>"60x60") %></td>
+        <td class="u-nombre"><%= user.nombre %></td>
+        <td class="u-nombre"><%= user.email %></td>
+        <td class="u-nombre"><%= user.role %></td>
+        <td class="u-nombre"><%= user.empresa.nombre %></td>
+        <td><%= link_to 'Show', user %></td>
+        <td><%= link_to 'Edit', edit_user_path(user) %></td>
+      </tr>
+    <% end %>
+  </tbody>
+</table>
+
+<br>
+
+<%= link_to 'New User', new_user_path %>
