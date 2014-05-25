@@ -12,7 +12,7 @@
 
   <p>
     <strong>Lider:</strong>
-    <%= @empresa.lider_id %>
+    <%= User.find_by(id: @empresa.lider_id).nombre %>
   </p>
 
   <p>

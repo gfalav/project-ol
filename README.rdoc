@@ -29,6 +29,8 @@ Please feel free to use a different markup language if you do not plan to run
 
 rails generate scaffold empresa nombre:string direccion1:string direccion2:string provincia:string pais:string zipcode:string telefono:string email:string website:string logofile:string lider_id:integer
 
+rails generate scaffold user nombre:string email:string password:digest fvctopass:datetime role:string direccion:string telefono:string celphone:string timezone:integer photofile:string empresa_id:integer
+
 rails generate scaffold proyecto empresa_id:integer nombre:string description:text comitente:string lider:string fcierre:datetime logofile:string eproyecto:string
 
 rails generate scaffold listtarea proyecto_id:integer lista:string descripcion:text elista:string lider_id:integer falta:datetime fvcto:datetime fuce:datetime fcierre:datetime
@@ -36,8 +38,6 @@ rails generate scaffold listtarea proyecto_id:integer lista:string descripcion:t
 rails generate scaffold tarea listtarea_id:integer nombre:string description:text fplanvcto:datetime ffin:datetime responsable:integer avance:float ttarea:integer etarea:integer privada:integer trepeticion:integer
 
 rails generate scaffold hito proyecto_id:integer nombre:string description:text ffin:datetime responsable_id:integer thito:integer ehito:integer privada:integer
-
-rails generate scaffold user nombre:string email:string password:digest fvctopass:datetime role:string direccion:string telefono:string celphone:string timezone:integer photofile:string empresa_id:integer
 
 rails generate scaffold archivo nombre:string falta:datetime user_id:integer
 

@@ -15,7 +15,7 @@
       <tr>
         <td class="e-logofile"><%= image_tag(Rails.root.join('app', 'assets', 'images', 'logos', empresa.logofile),:size=>"120x60") %></td>
         <td class="e-nombre"><%= empresa.nombre %></td>
-        <td class="e-lider"><%= empresa.lider_id %></td>
+        <td class="e-lider"><%= User.find_by(id: empresa.lider_id).nombre %></td>
         <td><%= link_to 'Show', empresa %></td>
         <td><%= link_to 'Edit', edit_empresa_path(empresa) %></td>
       </tr>

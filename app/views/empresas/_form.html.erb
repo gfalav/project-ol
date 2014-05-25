@@ -42,8 +42,7 @@
       </div>
       <div class="field">
         <%= f.label :lider_id, "Líder / Contacto" %><br>
-        <%= select_tag :lider_id %><br>
-        <%= f.number_field :lider_id %>
+        <%= f.select :lider_id, User.all.collect {|a| [a.nombre, a.id]} %><br>
       </div>
       <div class="field">
         <%= f.label :logofile,"Logo (Imagen de relación 2x1)" %><br>
