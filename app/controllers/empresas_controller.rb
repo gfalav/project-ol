@@ -1,5 +1,6 @@
 class EmpresasController < ApplicationController
   before_action :set_empresa, only: [:show, :edit, :update, :destroy]
+  before_action :empresas_authorize
 
   # GET /empresas
   # GET /empresas.json
@@ -89,5 +90,15 @@ class EmpresasController < ApplicationController
     # Never trust parameters from the scary internet, only allow the white list through.
     def empresa_params
       params.require(:empresa).permit(:nombre, :direccion1, :direccion2, :provincia, :pais, :zipcode, :telefono, :email, :website, :logofile, :lider_id)
+    end
+
+    def empresas_authorize
+      user = User.find_by(id: session[:user_logged])
+
+      if user
+
+      else
+        redirect_to login_url, alert: "Ingresar usuario y password"
+      end
     end
 end

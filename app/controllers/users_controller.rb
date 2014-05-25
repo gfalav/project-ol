@@ -1,5 +1,6 @@
 class UsersController < ApplicationController
   before_action :set_user, only: [:show, :edit, :update, :destroy]
+  before_action :users_authorize
 
   # GET /users
   # GET /users.json
@@ -96,4 +97,15 @@ class UsersController < ApplicationController
     def user_params
       params.require(:user).permit(:nombre, :email, :password, :password_confirmation, :fvctopass, :role, :direccion, :telefono, :celphone, :timezone, :photofile, :empresa_id)
     end
+
+    def users_authorize
+      user = User.find_by(id: session[:user_logged])
+
+      if user
+
+      else
+        redirect_to login_url, alert: "Ingresar usuario y password"
+      end
+    end
+
 end
