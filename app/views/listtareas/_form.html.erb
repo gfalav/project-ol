@@ -1,0 +1,53 @@
+<%= form_for(@listtarea) do |f| %>
+  <% if @listtarea.errors.any? %>
+    <div id="error_explanation">
+      <h2><%= pluralize(@listtarea.errors.count, "error") %> prohibited this listtarea from being saved:</h2>
+
+      <ul>
+      <% @listtarea.errors.full_messages.each do |message| %>
+        <li><%= message %></li>
+      <% end %>
+      </ul>
+    </div>
+  <% end %>
+
+  <div class="field">
+    <%= f.label :proyecto_id %><br>
+    <%= f.number_field :proyecto_id %>
+  </div>
+  <div class="field">
+    <%= f.label :lista %><br>
+    <%= f.text_field :lista %>
+  </div>
+  <div class="field">
+    <%= f.label :descripcion %><br>
+    <%= f.text_area :descripcion %>
+  </div>
+  <div class="field">
+    <%= f.label :elista %><br>
+    <%= f.text_field :elista %>
+  </div>
+  <div class="field">
+    <%= f.label :lider_id %><br>
+    <%= f.number_field :lider_id %>
+  </div>
+  <div class="field">
+    <%= f.label :falta %><br>
+    <%= f.datetime_select :falta %>
+  </div>
+  <div class="field">
+    <%= f.label :fvcto %><br>
+    <%= f.datetime_select :fvcto %>
+  </div>
+  <div class="field">
+    <%= f.label :fuce %><br>
+    <%= f.datetime_select :fuce %>
+  </div>
+  <div class="field">
+    <%= f.label :fcierre %><br>
+    <%= f.datetime_select :fcierre %>
+  </div>
+  <div class="actions">
+    <%= f.submit %>
+  </div>
+<% end %>

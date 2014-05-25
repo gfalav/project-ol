@@ -1,0 +1,49 @@
+<%= form_for(@hito) do |f| %>
+  <% if @hito.errors.any? %>
+    <div id="error_explanation">
+      <h2><%= pluralize(@hito.errors.count, "error") %> prohibited this hito from being saved:</h2>
+
+      <ul>
+      <% @hito.errors.full_messages.each do |message| %>
+        <li><%= message %></li>
+      <% end %>
+      </ul>
+    </div>
+  <% end %>
+
+  <div class="field">
+    <%= f.label :proyecto_id %><br>
+    <%= f.number_field :proyecto_id %>
+  </div>
+  <div class="field">
+    <%= f.label :nombre %><br>
+    <%= f.text_field :nombre %>
+  </div>
+  <div class="field">
+    <%= f.label :description %><br>
+    <%= f.text_area :description %>
+  </div>
+  <div class="field">
+    <%= f.label :ffin %><br>
+    <%= f.datetime_select :ffin %>
+  </div>
+  <div class="field">
+    <%= f.label :responsable_id %><br>
+    <%= f.number_field :responsable_id %>
+  </div>
+  <div class="field">
+    <%= f.label :thito %><br>
+    <%= f.number_field :thito %>
+  </div>
+  <div class="field">
+    <%= f.label :ehito %><br>
+    <%= f.number_field :ehito %>
+  </div>
+  <div class="field">
+    <%= f.label :privada %><br>
+    <%= f.number_field :privada %>
+  </div>
+  <div class="actions">
+    <%= f.submit %>
+  </div>
+<% end %>

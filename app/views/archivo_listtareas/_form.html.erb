@@ -1,0 +1,25 @@
+<%= form_for(@archivo_listtarea) do |f| %>
+  <% if @archivo_listtarea.errors.any? %>
+    <div id="error_explanation">
+      <h2><%= pluralize(@archivo_listtarea.errors.count, "error") %> prohibited this archivo_listtarea from being saved:</h2>
+
+      <ul>
+      <% @archivo_listtarea.errors.full_messages.each do |message| %>
+        <li><%= message %></li>
+      <% end %>
+      </ul>
+    </div>
+  <% end %>
+
+  <div class="field">
+    <%= f.label :archivo_id %><br>
+    <%= f.number_field :archivo_id %>
+  </div>
+  <div class="field">
+    <%= f.label :listtarea_id %><br>
+    <%= f.number_field :listtarea_id %>
+  </div>
+  <div class="actions">
+    <%= f.submit %>
+  </div>
+<% end %>

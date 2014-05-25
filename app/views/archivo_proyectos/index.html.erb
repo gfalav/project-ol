@@ -1,0 +1,27 @@
+<h1>Listing archivo_proyectos</h1>
+
+<table>
+  <thead>
+    <tr>
+      <th>Archivo</th>
+      <th>Proyecto</th>
+      <th colspan="3"></th>
+    </tr>
+  </thead>
+
+  <tbody>
+    <% @archivo_proyectos.each do |archivo_proyecto| %>
+      <tr>
+        <td><%= archivo_proyecto.archivo_id %></td>
+        <td><%= archivo_proyecto.proyecto_id %></td>
+        <td><%= link_to 'Show', archivo_proyecto %></td>
+        <td><%= link_to 'Edit', edit_archivo_proyecto_path(archivo_proyecto) %></td>
+        <td><%= link_to 'Destroy', archivo_proyecto, method: :delete, data: { confirm: 'Are you sure?' } %></td>
+      </tr>
+    <% end %>
+  </tbody>
+</table>
+
+<br>
+
+<%= link_to 'New Archivo proyecto', new_archivo_proyecto_path %>

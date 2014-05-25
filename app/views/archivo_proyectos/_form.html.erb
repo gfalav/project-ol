@@ -1,0 +1,25 @@
+<%= form_for(@archivo_proyecto) do |f| %>
+  <% if @archivo_proyecto.errors.any? %>
+    <div id="error_explanation">
+      <h2><%= pluralize(@archivo_proyecto.errors.count, "error") %> prohibited this archivo_proyecto from being saved:</h2>
+
+      <ul>
+      <% @archivo_proyecto.errors.full_messages.each do |message| %>
+        <li><%= message %></li>
+      <% end %>
+      </ul>
+    </div>
+  <% end %>
+
+  <div class="field">
+    <%= f.label :archivo_id %><br>
+    <%= f.number_field :archivo_id %>
+  </div>
+  <div class="field">
+    <%= f.label :proyecto_id %><br>
+    <%= f.number_field :proyecto_id %>
+  </div>
+  <div class="actions">
+    <%= f.submit %>
+  </div>
+<% end %>

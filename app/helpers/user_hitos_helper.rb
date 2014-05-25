@@ -1,0 +1,2 @@
+module UserHitosHelper
+end

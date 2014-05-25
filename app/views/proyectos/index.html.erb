@@ -1,0 +1,28 @@
+<h1 class="form_title">"Lista de proyectos"</h1>
+
+<table class="e-table">
+  <thead>
+    <tr>
+      <th class="e-nombre">Nombre</th>
+      <th class="e-nombre">Comitente</th>
+      <th class="e-nombre">Lider</th>
+      <th colspan="2"></th>
+    </tr>
+  </thead>
+
+  <tbody>
+    <% @proyectos.each do |proyecto| %>
+      <tr>
+        <td class="u-nombre"><%= proyecto.nombre %></td>
+        <td class="u-nombre"><%= proyecto.comitente %></td>
+        <td class="u-nombre"><%= User.find_by(id: proyecto.lider).nombre %></td>
+        <td><%= link_to 'Show', proyecto %></td>
+        <td><%= link_to 'Edit', edit_proyecto_path(proyecto) %></td>
+      </tr>
+    <% end %>
+  </tbody>
+</table>
+
+<br>
+
+<%= link_to 'New Proyecto', new_proyecto_path %>

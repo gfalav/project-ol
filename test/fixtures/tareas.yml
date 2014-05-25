@@ -1,0 +1,27 @@
+# Read about fixtures at http://api.rubyonrails.org/classes/ActiveRecord/FixtureSet.html
+
+one:
+  listtarea_id: 1
+  nombre: MyString
+  description: MyText
+  fplanvcto: 2014-05-25 15:23:38
+  ffin: 2014-05-25 15:23:38
+  responsable: 1
+  avance: 1.5
+  ttarea: 1
+  etarea: 1
+  privada: 1
+  trepeticion: 1
+
+two:
+  listtarea_id: 1
+  nombre: MyString
+  description: MyText
+  fplanvcto: 2014-05-25 15:23:38
+  ffin: 2014-05-25 15:23:38
+  responsable: 1
+  avance: 1.5
+  ttarea: 1
+  etarea: 1
+  privada: 1
+  trepeticion: 1

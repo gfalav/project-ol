@@ -1,0 +1,14 @@
+<p id="notice"><%= notice %></p>
+
+<p>
+  <strong>Archivo:</strong>
+  <%= @archivo_hito.archivo_id %>
+</p>
+
+<p>
+  <strong>Hito:</strong>
+  <%= @archivo_hito.hito_id %>
+</p>
+
+<%= link_to 'Edit', edit_archivo_hito_path(@archivo_hito) %> |
+<%= link_to 'Back', archivo_hitos_path %>

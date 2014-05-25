@@ -1,0 +1,21 @@
+# Read about fixtures at http://api.rubyonrails.org/classes/ActiveRecord/FixtureSet.html
+
+one:
+  proyecto_id: 1
+  nombre: MyString
+  description: MyText
+  ffin: 2014-05-25 15:23:47
+  responsable_id: 1
+  thito: 1
+  ehito: 1
+  privada: 1
+
+two:
+  proyecto_id: 1
+  nombre: MyString
+  description: MyText
+  ffin: 2014-05-25 15:23:47
+  responsable_id: 1
+  thito: 1
+  ehito: 1
+  privada: 1

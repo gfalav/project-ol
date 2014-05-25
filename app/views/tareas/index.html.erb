@@ -1,0 +1,45 @@
+<h1>Listing tareas</h1>
+
+<table>
+  <thead>
+    <tr>
+      <th>Listtarea</th>
+      <th>Nombre</th>
+      <th>Description</th>
+      <th>Fplanvcto</th>
+      <th>Ffin</th>
+      <th>Responsable</th>
+      <th>Avance</th>
+      <th>Ttarea</th>
+      <th>Etarea</th>
+      <th>Privada</th>
+      <th>Trepeticion</th>
+      <th colspan="3"></th>
+    </tr>
+  </thead>
+
+  <tbody>
+    <% @tareas.each do |tarea| %>
+      <tr>
+        <td><%= tarea.listtarea_id %></td>
+        <td><%= tarea.nombre %></td>
+        <td><%= tarea.description %></td>
+        <td><%= tarea.fplanvcto %></td>
+        <td><%= tarea.ffin %></td>
+        <td><%= tarea.responsable %></td>
+        <td><%= tarea.avance %></td>
+        <td><%= tarea.ttarea %></td>
+        <td><%= tarea.etarea %></td>
+        <td><%= tarea.privada %></td>
+        <td><%= tarea.trepeticion %></td>
+        <td><%= link_to 'Show', tarea %></td>
+        <td><%= link_to 'Edit', edit_tarea_path(tarea) %></td>
+        <td><%= link_to 'Destroy', tarea, method: :delete, data: { confirm: 'Are you sure?' } %></td>
+      </tr>
+    <% end %>
+  </tbody>
+</table>
+
+<br>
+
+<%= link_to 'New Tarea', new_tarea_path %>

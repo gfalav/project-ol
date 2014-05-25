@@ -1,0 +1,39 @@
+<h1>Listing hitos</h1>
+
+<table>
+  <thead>
+    <tr>
+      <th>Proyecto</th>
+      <th>Nombre</th>
+      <th>Description</th>
+      <th>Ffin</th>
+      <th>Responsable</th>
+      <th>Thito</th>
+      <th>Ehito</th>
+      <th>Privada</th>
+      <th colspan="3"></th>
+    </tr>
+  </thead>
+
+  <tbody>
+    <% @hitos.each do |hito| %>
+      <tr>
+        <td><%= hito.proyecto_id %></td>
+        <td><%= hito.nombre %></td>
+        <td><%= hito.description %></td>
+        <td><%= hito.ffin %></td>
+        <td><%= hito.responsable_id %></td>
+        <td><%= hito.thito %></td>
+        <td><%= hito.ehito %></td>
+        <td><%= hito.privada %></td>
+        <td><%= link_to 'Show', hito %></td>
+        <td><%= link_to 'Edit', edit_hito_path(hito) %></td>
+        <td><%= link_to 'Destroy', hito, method: :delete, data: { confirm: 'Are you sure?' } %></td>
+      </tr>
+    <% end %>
+  </tbody>
+</table>
+
+<br>
+
+<%= link_to 'New Hito', new_hito_path %>

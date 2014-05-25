@@ -1,0 +1,14 @@
+<p id="notice"><%= notice %></p>
+
+<p>
+  <strong>Archivo:</strong>
+  <%= @archivo_tarea.archivo_id %>
+</p>
+
+<p>
+  <strong>Tarea:</strong>
+  <%= @archivo_tarea.tarea_id %>
+</p>
+
+<%= link_to 'Edit', edit_archivo_tarea_path(@archivo_tarea) %> |
+<%= link_to 'Back', archivo_tareas_path %>

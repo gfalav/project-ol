@@ -1,0 +1,27 @@
+<h1>Listing user_hitos</h1>
+
+<table>
+  <thead>
+    <tr>
+      <th>User</th>
+      <th>Hito</th>
+      <th colspan="3"></th>
+    </tr>
+  </thead>
+
+  <tbody>
+    <% @user_hitos.each do |user_hito| %>
+      <tr>
+        <td><%= user_hito.user_id %></td>
+        <td><%= user_hito.hito_id %></td>
+        <td><%= link_to 'Show', user_hito %></td>
+        <td><%= link_to 'Edit', edit_user_hito_path(user_hito) %></td>
+        <td><%= link_to 'Destroy', user_hito, method: :delete, data: { confirm: 'Are you sure?' } %></td>
+      </tr>
+    <% end %>
+  </tbody>
+</table>
+
+<br>
+
+<%= link_to 'New User hito', new_user_hito_path %>

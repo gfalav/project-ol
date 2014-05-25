@@ -1,0 +1,27 @@
+<h1>Listing archivo_hitos</h1>
+
+<table>
+  <thead>
+    <tr>
+      <th>Archivo</th>
+      <th>Hito</th>
+      <th colspan="3"></th>
+    </tr>
+  </thead>
+
+  <tbody>
+    <% @archivo_hitos.each do |archivo_hito| %>
+      <tr>
+        <td><%= archivo_hito.archivo_id %></td>
+        <td><%= archivo_hito.hito_id %></td>
+        <td><%= link_to 'Show', archivo_hito %></td>
+        <td><%= link_to 'Edit', edit_archivo_hito_path(archivo_hito) %></td>
+        <td><%= link_to 'Destroy', archivo_hito, method: :delete, data: { confirm: 'Are you sure?' } %></td>
+      </tr>
+    <% end %>
+  </tbody>
+</table>
+
+<br>
+
+<%= link_to 'New Archivo hito', new_archivo_hito_path %>

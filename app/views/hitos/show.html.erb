@@ -1,0 +1,44 @@
+<p id="notice"><%= notice %></p>
+
+<p>
+  <strong>Proyecto:</strong>
+  <%= @hito.proyecto_id %>
+</p>
+
+<p>
+  <strong>Nombre:</strong>
+  <%= @hito.nombre %>
+</p>
+
+<p>
+  <strong>Description:</strong>
+  <%= @hito.description %>
+</p>
+
+<p>
+  <strong>Ffin:</strong>
+  <%= @hito.ffin %>
+</p>
+
+<p>
+  <strong>Responsable:</strong>
+  <%= @hito.responsable_id %>
+</p>
+
+<p>
+  <strong>Thito:</strong>
+  <%= @hito.thito %>
+</p>
+
+<p>
+  <strong>Ehito:</strong>
+  <%= @hito.ehito %>
+</p>
+
+<p>
+  <strong>Privada:</strong>
+  <%= @hito.privada %>
+</p>
+
+<%= link_to 'Edit', edit_hito_path(@hito) %> |
+<%= link_to 'Back', hitos_path %>

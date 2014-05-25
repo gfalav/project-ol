@@ -1,0 +1,27 @@
+<h1>Listing user_proyectos</h1>
+
+<table>
+  <thead>
+    <tr>
+      <th>User</th>
+      <th>Proyecto</th>
+      <th colspan="3"></th>
+    </tr>
+  </thead>
+
+  <tbody>
+    <% @user_proyectos.each do |user_proyecto| %>
+      <tr>
+        <td><%= user_proyecto.user_id %></td>
+        <td><%= user_proyecto.proyecto_id %></td>
+        <td><%= link_to 'Show', user_proyecto %></td>
+        <td><%= link_to 'Edit', edit_user_proyecto_path(user_proyecto) %></td>
+        <td><%= link_to 'Destroy', user_proyecto, method: :delete, data: { confirm: 'Are you sure?' } %></td>
+      </tr>
+    <% end %>
+  </tbody>
+</table>
+
+<br>
+
+<%= link_to 'New User proyecto', new_user_proyecto_path %>

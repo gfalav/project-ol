@@ -1,5 +1,31 @@
 Rails.application.routes.draw do
 
+  resources :archivo_hitos
+
+  resources :archivo_tareas
+
+  resources :archivo_listtareas
+
+  resources :archivo_proyectos
+
+  resources :user_hitos
+
+  resources :user_tareas
+
+  resources :user_listtareas
+
+  resources :user_proyectos
+
+  resources :archivos
+
+  resources :hitos
+
+  resources :tareas
+
+  resources :listtareas
+
+  resources :proyectos
+
   controller :session do
     get "login" => :new
     post "login" => :create

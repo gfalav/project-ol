@@ -1,0 +1,49 @@
+<p id="notice"><%= notice %></p>
+
+<p>
+  <strong>Proyecto:</strong>
+  <%= @listtarea.proyecto_id %>
+</p>
+
+<p>
+  <strong>Lista:</strong>
+  <%= @listtarea.lista %>
+</p>
+
+<p>
+  <strong>Descripcion:</strong>
+  <%= @listtarea.descripcion %>
+</p>
+
+<p>
+  <strong>Elista:</strong>
+  <%= @listtarea.elista %>
+</p>
+
+<p>
+  <strong>Lider:</strong>
+  <%= @listtarea.lider_id %>
+</p>
+
+<p>
+  <strong>Falta:</strong>
+  <%= @listtarea.falta %>
+</p>
+
+<p>
+  <strong>Fvcto:</strong>
+  <%= @listtarea.fvcto %>
+</p>
+
+<p>
+  <strong>Fuce:</strong>
+  <%= @listtarea.fuce %>
+</p>
+
+<p>
+  <strong>Fcierre:</strong>
+  <%= @listtarea.fcierre %>
+</p>
+
+<%= link_to 'Edit', edit_listtarea_path(@listtarea) %> |
+<%= link_to 'Back', listtareas_path %>

@@ -1,0 +1,21 @@
+# Read about fixtures at http://api.rubyonrails.org/classes/ActiveRecord/FixtureSet.html
+
+one:
+  empresa_id: 1
+  nombre: MyString
+  description: MyText
+  comitente: MyString
+  lider: MyString
+  fcierre: 2014-05-25 15:23:19
+  logofile: MyString
+  eproyecto: MyString
+
+two:
+  empresa_id: 1
+  nombre: MyString
+  description: MyText
+  comitente: MyString
+  lider: MyString
+  fcierre: 2014-05-25 15:23:19
+  logofile: MyString
+  eproyecto: MyString

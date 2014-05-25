@@ -13,10 +13,10 @@
 			<div id="mmcontainer">
 				<ul>
 					<li><%= link_to "PIZARRA" %></li>
-					<li><%= link_to "PROYECTO" %></li>
-					<li><%= link_to "PROGRAMA" %></li>
-					<li><%= link_to "TAREA" %></li>
-					<li><%= link_to "HITO" %></li>
+					<li><%= link_to "PROYECTO", proyectos_url %></li>
+					<li><%= link_to "PROGRAMA", listtareas_url %></li>
+					<li><%= link_to "TAREA", tareas_url %></li>
+					<li><%= link_to "HITO", hitos_url %></li>
 				</ul>
 			</div>
 		</div>
@@ -38,12 +38,12 @@
 	<div id="projectbar">
 		<div id="textbar">
 			<% if @linea1 %>
-				<h3><%= label_tag ("línea uno") %></h3>
+				<h3 class="linea1"><%= @linea1 %></h3>
 			<% else %>
 				<h3 style="padding: 20px 20px 20px 80px;">Gestión de Proyectos Online</h3>			
 			<% end %>
 			<% if @linea2 %>
-				<h4><%= label_tag ("linea dos") %></h4>
+				<h4 class="linea2"><%= @linea2 %></h4>
 			<% end %>
 		</div>
 		<div id="userimage">

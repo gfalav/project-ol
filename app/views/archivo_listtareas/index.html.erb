@@ -1,0 +1,27 @@
+<h1>Listing archivo_listtareas</h1>
+
+<table>
+  <thead>
+    <tr>
+      <th>Archivo</th>
+      <th>Listtarea</th>
+      <th colspan="3"></th>
+    </tr>
+  </thead>
+
+  <tbody>
+    <% @archivo_listtareas.each do |archivo_listtarea| %>
+      <tr>
+        <td><%= archivo_listtarea.archivo_id %></td>
+        <td><%= archivo_listtarea.listtarea_id %></td>
+        <td><%= link_to 'Show', archivo_listtarea %></td>
+        <td><%= link_to 'Edit', edit_archivo_listtarea_path(archivo_listtarea) %></td>
+        <td><%= link_to 'Destroy', archivo_listtarea, method: :delete, data: { confirm: 'Are you sure?' } %></td>
+      </tr>
+    <% end %>
+  </tbody>
+</table>
+
+<br>
+
+<%= link_to 'New Archivo listtarea', new_archivo_listtarea_path %>
